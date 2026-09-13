@@ -2122,3 +2122,58 @@ html[data-reduced-motion="true"] *:after {
   width: auto;
   min-width: auto;
 }
+.custom-character-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-top: 18px;
+}
+
+.character-name-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  border: 1px solid #303b49;
+  border-radius: 10px;
+  background: #0d1622;
+  color: #edf1f5;
+  font-size: 13px;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.character-name-input::placeholder {
+  color: #657384;
+}
+
+.character-name-input:focus {
+  border-color: var(--mint);
+  box-shadow: 0 0 0 3px #aeefd31a;
+}
+
+.custom-upload-button {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.custom-upload-button span {
+  pointer-events: none;
+}
+
+.custom-upload-hint {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: center;
+}
