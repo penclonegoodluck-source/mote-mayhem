@@ -521,23 +521,30 @@ const removeCustomCharacter = (id) => {
     <p>Upload an image and make it your playable character.</p>
   </div>
 
-  <input
-    type="text"
-    placeholder="Character name"
-    value={customName}
-    onChange={(e) => setCustomName(e.target.value)}
-    maxLength={30}
-  />
-
-  <label className="primary">
-    Upload Character
+  <div className="custom-character-form">
     <input
-      type="file"
-      accept="image/png,image/jpeg,image/webp"
-      hidden
-      onChange={(e) => handleCustomCharacter(e.target.files?.[0])}
+      className="character-name-input"
+      type="text"
+      placeholder="Enter character name"
+      value={customName}
+      onChange={(e) => setCustomName(e.target.value)}
+      maxLength={30}
     />
-  </label>
+
+    <label className="primary custom-upload-button">
+      <span>＋ Upload Character</span>
+      <input
+        type="file"
+        accept="image/png,image/jpeg,image/webp"
+        hidden
+        onChange={(e) => handleCustomCharacter(e.target.files?.[0])}
+      />
+    </label>
+
+    <small className="custom-upload-hint">
+      PNG, JPG or WEBP · Max 2MB · Up to 3 characters
+    </small>
+  </div>
 
   
 </div>
