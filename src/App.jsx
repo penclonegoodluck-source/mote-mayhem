@@ -145,7 +145,10 @@ export default function App() {
 
   const processImage = async () => {
   try {
-    const blob = await removeBackground(file);
+    const blob = await removeBackground(file, {
+  model: "isnet_quint8",
+  device: "gpu",
+});
 
     const reader = new FileReader();
 
